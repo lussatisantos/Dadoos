@@ -6,6 +6,7 @@ void main() {
       home: Scaffold(
         backgroundColor: Colors.teal.shade700,
         appBar: AppBar(
+          centerTitle: true,
           title: Text(
             'Dadoos',
             style: TextStyle(
