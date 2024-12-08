@@ -21,11 +21,17 @@ void main() {
   );
 }
 
-class Dadoos extends StatelessWidget {
+class Dadoos extends StatefulWidget {
+  const Dadoos({super.key});
+
+  @override
+  State<Dadoos> createState() => _DadoosState();
+}
+
+class _DadoosState extends State<Dadoos> {
+  var numeroDoDadosDaEsquerda = 1;
   @override
   Widget build(BuildContext context) {
-    var numeroDoDadosDaEsquerda = 1;
-
     return Center(
       child: Row(
         children: [
@@ -50,3 +56,4 @@ class Dadoos extends StatelessWidget {
     );
   }
 }
+
