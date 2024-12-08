@@ -7,7 +7,7 @@ void main() {
         backgroundColor: Colors.teal.shade700,
         appBar: AppBar(
           centerTitle: true,
-          title: Text(
+          title: const Text(
             'Dadoos',
             style: TextStyle(
               color: Colors.white,
@@ -28,15 +28,20 @@ class Dadoos extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Image.asset('imgs/dado1.png'),
+            child: TextButton(
+              onPressed: () {print('Botao 1 pressionado!');},
+              child: Image.asset(
+                'imgs/dado1.png',
+              ),
             ),
           ),
           Expanded(
-            child: Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Image.asset('imgs/dado2.png')),
+            child: TextButton(
+              onPressed: () {print('Botao 2 pressionado');},
+              child: Image.asset(
+                'imgs/dado2.png',
+              ),
+            ),
           )
         ],
       ),
