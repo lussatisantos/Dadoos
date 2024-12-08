@@ -29,7 +29,8 @@ class Dadoos extends StatefulWidget {
 }
 
 class _DadoosState extends State<Dadoos> {
-  var numeroDoDadosDaEsquerda = 1;
+  int numeroDoDadosDaEsquerda = 1;
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -37,7 +38,11 @@ class _DadoosState extends State<Dadoos> {
         children: [
           Expanded(
             child: TextButton(
-              onPressed: () {print('Botao 1 pressionado!');},
+              onPressed: () {
+                setState(() {
+                  numeroDoDadosDaEsquerda = 2;
+                });
+              },
               child: Image.asset(
                 'imgs/dado$numeroDoDadosDaEsquerda.png',
               ),
@@ -45,7 +50,9 @@ class _DadoosState extends State<Dadoos> {
           ),
           Expanded(
             child: TextButton(
-              onPressed: () {print('Botao 2 pressionado');},
+              onPressed: () {
+                print('Botao 2 pressionado');
+              },
               child: Image.asset(
                 'imgs/dado2.png',
               ),
@@ -56,4 +63,3 @@ class _DadoosState extends State<Dadoos> {
     );
   }
 }
-
