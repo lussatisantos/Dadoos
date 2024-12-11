@@ -42,6 +42,7 @@ class _DadoosState extends State<Dadoos> {
             child: TextButton(
               onPressed: () {
                 setState(() {
+                  numeroDoDadosDaDireita = Random().nextInt(6)+1;
                   numeroDoDadosDaEsquerda = Random().nextInt(6)+1;
                 });
               },
@@ -54,6 +55,7 @@ class _DadoosState extends State<Dadoos> {
             child: TextButton(
               onPressed: () {
                 setState(() {
+                  numeroDoDadosDaEsquerda = Random().nextInt(6)+1;
                   numeroDoDadosDaDireita = Random().nextInt(6)+1;
                 });
               },
@@ -66,4 +68,8 @@ class _DadoosState extends State<Dadoos> {
       ),
     );
   }
+}
+
+void change (){
+  
 }
